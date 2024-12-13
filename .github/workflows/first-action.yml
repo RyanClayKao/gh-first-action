@@ -1,10 +1,20 @@
+# yaml檔編寫規則：用 tab 縮排的內容做為區別，像是 python那樣的概念
+
+# workflow 的名稱
 name: First Workflow
+# 啟用方式：手動觸發
 on: workflow_dispatch
+# 定義 jobs 有哪些
 jobs: 
+  # 自定義的 job 名稱
   first-job:
+    # 要在哪個作業系統環境運行
     runs-on: ubuntu-latest
+    # 定義 steps
     steps:
+      # 第一個 step，為其命名；run 後方接的是終端機或是shell會輸入的 command 指令
       - name: Print greeting
         run: echo "Hello World!"
+      # 第二個 step
       - name: Print goodbye
         run: echo "Done - bye!"
